@@ -1,9 +1,14 @@
 import java.util.ArrayList;
 
-public class GestionDeMisiones {
+public class GestionMisiones {
     private ArrayList<Mision> misones;
 
-    public GestionDeMisiones(){
+    public GestionMisiones(){
         this.misones = new ArrayList<>();
     }
+
+    public boolean crearMision(){
+
+    }
+
 }
