@@ -47,9 +47,10 @@ public class GestionMisiones {
      * @return cadena de texto donde se muestran las misiones
      */
     public String listarMisiones(){
-        StringBuilder sb = new StringBuilder();
+        StringBuilder sb = new StringBuilder("Misiones: { \n");
 
-        while(! misiones.isEmpty()){
+        for(Mision mision : misiones){
+            sb.append("\t");
             sb.append(misiones.toString());
             sb.append("\n");
         }
@@ -67,14 +68,21 @@ public class GestionMisiones {
         boolean seguirBuscando = true;
         int posicion = 0;
 
-        while(! misiones.isEmpty() && seguirBuscando){
-            if(misiones.get(posicion).getId()  == id){
-                mision = misiones.get(posicion);
+        while(!misiones.isEmpty() && seguirBuscando){
+            mision = misiones.get(posicion);
+
+            if(mision != null && mision.getId()  == id){
+
+                //mision = misiones.get(posicion);
                 seguirBuscando = false;
             }
             posicion++;
         }
         return mision;
+    }
+
+    public boolean eliminarMision(int id){
+
     }
 
 
