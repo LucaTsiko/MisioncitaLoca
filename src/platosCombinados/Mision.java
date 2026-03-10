@@ -1,3 +1,5 @@
+package platosCombinados;
+
 public class Mision {
     private int id;
     private String nombre;
