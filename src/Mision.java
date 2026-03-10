@@ -33,4 +33,20 @@ public class Mision {
     public boolean completada() {
         return completada;
     }
+
+    @Override
+    public String toString(){
+        StringBuilder sb = new StringBuilder();
+
+        sb.append(this.nombre);
+        sb.append("\n");
+        sb.append(this.dificultad);
+        sb.append("\n");
+        sb.append(this.nivelRecomendado);
+        sb.append("\n");
+        sb.append(this.recompensaExperiencia);
+        sb.append("\n");
+
+        return sb.toString();
+    }
 }
