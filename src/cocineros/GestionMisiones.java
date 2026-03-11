@@ -81,11 +81,24 @@ public class GestionMisiones {
         return mision;
     }
 
-    public boolean eliminarMision(int id){
+    /**
+     * Metodo que elimina la mision segun el id que recibimos
+     * @param id identificador por el que buscamos la mision que queremos eliminar
+     * @return la mision eliminada o null en caso contrario
+     */
+    public Mision eliminarMision(int id){
+        Mision misionEliminada = null;
 
+        if(buscarMisionPorID(id) !=null){
+                misionEliminada = buscarMisionPorID(id);
+        }
+
+        return misionEliminada;
     }
 
 
-
 }
+
+
+
 
