@@ -13,4 +13,17 @@ public class InterfazConsola {
     // pedir distintos tipos de datos
     // llamar a las distintas funcionalidades del gestor
 
+    /**
+     * Metodo que imprime la consola
+     */
+    public void iniciar(){
+        System.out.println("CONSOLA");
+        System.out.println("-----------------------------------------------");
+        System.out.println("1. Listar Misiones \n" +
+                "2. Crear Mision \n" +
+                "3. buscar Mision\n" +
+                "\n 9. Eliminar Mision (solicita informacion)\n" +
+                "\n 0. Salir");
+        System.out.println("-----------------------------------------------");
+    }
 }
