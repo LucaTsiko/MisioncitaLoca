@@ -87,13 +87,36 @@ public class GestionMisiones {
      * @return la mision eliminada o null en caso contrario
      */
     public Mision eliminarMision(int id){
-        Mision misionEliminada = null;
+        Mision misionAEliminar;
+        misionAEliminar = buscarMisionPorID(id);
 
-        if(buscarMisionPorID(id) !=null){
-                misionEliminada = buscarMisionPorID(id);
+        if(misionAEliminar !=null){
+            // misionEliminada = buscarMisionPorID(id);
+            misiones.remove(misionAEliminar);
         }
 
-        return misionEliminada;
+        return misionAEliminar;
+    }
+
+    public String eliminarMision(Mision mision){
+        String respuesta = "No se ha podido eliminar a misión " + mision;
+
+        if(mision != null){
+            misiones.remove(mision);
+            respuesta = "Se ha eliminado correctamente la misión";
+        }
+
+        return respuesta + mision.toString();
+    }
+
+    /**
+     * Metodo que cuenta las misiones
+     * @return El número de las misiones.
+     */
+    public int contarMisiones(){
+
+      return misiones.size();
+
     }
 
 
